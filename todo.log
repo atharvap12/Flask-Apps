@@ -1,0 +1,134 @@
+[September 12, 2023 11:08:05 India Standard Time] [INFO | _internal] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+[September 12, 2023 11:08:05 India Standard Time] [INFO | _internal] [33mPress CTRL+C to quit[0m
+[September 12, 2023 11:08:05 India Standard Time] [INFO | _internal]  * Restarting with stat
+[September 12, 2023 11:08:05 India Standard Time] [WARNING | _internal]  * Debugger is active!
+[September 12, 2023 11:08:05 India Standard Time] [INFO | _internal]  * Debugger PIN: 102-174-982
+[September 12, 2023 11:08:44 India Standard Time] [INFO | myapp] >>REQ>> A user visited the home page.
+[September 12, 2023 11:08:44 India Standard Time] [INFO | myapp] ================================================================================
+[September 12, 2023 11:08:44 India Standard Time] [INFO | myapp]  SQL Queries - 0 Queries Executed in 0.0ms
+[September 12, 2023 11:08:44 India Standard Time] [INFO | myapp] ================================================================================
+[September 12, 2023 11:08:44 India Standard Time] [INFO | myapp] 
+[September 12, 2023 11:08:44 India Standard Time] [INFO | myapp] ================================================================================
+[September 12, 2023 11:08:44 India Standard Time] [INFO | myapp] >>RESP>> path: / | method: GET | status: 200 OK | size: 12
+[September 12, 2023 11:08:44 India Standard Time] [INFO | _internal] 127.0.0.1 - - [12/Sep/2023 11:08:44] "GET / HTTP/1.1" 200 -
+[September 12, 2023 11:08:50 India Standard Time] [INFO | routes] >>REQ>> A user retrieved all added tasks.
+[September 12, 2023 11:08:50 India Standard Time] [INFO | routes] >>REQ>> A user retrieved all added tasks.
+[September 12, 2023 11:08:50 India Standard Time] [INFO | myapp] ================================================================================
+[September 12, 2023 11:08:50 India Standard Time] [INFO | myapp]  SQL Queries - 2 Queries Executed in 4.18ms
+[September 12, 2023 11:08:50 India Standard Time] [INFO | myapp] ================================================================================
+[September 12, 2023 11:08:50 India Standard Time] [INFO | myapp] Query: SELECT count(*) AS count_1 
+       FROM (SELECT task."ID" AS "task_ID", task."Title" AS "task_Title", task."Status" AS "task_Status" 
+       FROM task) AS anon_1
+Duration: 3.62ms
+
+Query: SELECT task."ID" AS "task_ID", task."Title" AS "task_Title", task."Status" AS "task_Status" 
+       FROM task
+Duration: 0.55ms
+[September 12, 2023 11:08:50 India Standard Time] [INFO | myapp] ================================================================================
+[September 12, 2023 11:08:50 India Standard Time] [INFO | myapp] >>RESP>> path: /todos | method: GET | status: 200 OK | size: 362
+[September 12, 2023 11:08:50 India Standard Time] [INFO | _internal] 127.0.0.1 - - [12/Sep/2023 11:08:50] "GET /todos HTTP/1.1" 200 -
+[September 12, 2023 11:09:52 India Standard Time] [INFO | routes] >>REQ>> A user performed a POST operation succesfully.
+[September 12, 2023 11:09:52 India Standard Time] [INFO | routes] >>REQ>> A user performed a POST operation succesfully.
+[September 12, 2023 11:09:52 India Standard Time] [INFO | myapp] ================================================================================
+[September 12, 2023 11:09:52 India Standard Time] [INFO | myapp]  SQL Queries - 2 Queries Executed in 3.57ms
+[September 12, 2023 11:09:52 India Standard Time] [INFO | myapp] ================================================================================
+[September 12, 2023 11:09:52 India Standard Time] [INFO | myapp] Query: SELECT task."ID" AS "task_ID", task."Title" AS "task_Title", task."Status" AS "task_Status" 
+       FROM task 
+       WHERE task."ID" IS NULL
+Duration: 1.07ms
+
+Query: INSERT INTO task ("Title", "Status") VALUES (?, ?)
+Duration: 2.5ms
+[September 12, 2023 11:09:52 India Standard Time] [INFO | myapp] ================================================================================
+[September 12, 2023 11:09:52 India Standard Time] [INFO | myapp] >>RESP>> path: /todos | method: POST | status: 200 OK | size: 128
+[September 12, 2023 11:09:52 India Standard Time] [INFO | _internal] 127.0.0.1 - - [12/Sep/2023 11:09:52] "POST /todos HTTP/1.1" 200 -
+[September 12, 2023 11:09:57 India Standard Time] [INFO | routes] >>REQ>> A user retrieved all added tasks.
+[September 12, 2023 11:09:57 India Standard Time] [INFO | routes] >>REQ>> A user retrieved all added tasks.
+[September 12, 2023 11:09:57 India Standard Time] [INFO | myapp] ================================================================================
+[September 12, 2023 11:09:57 India Standard Time] [INFO | myapp]  SQL Queries - 2 Queries Executed in 0.52ms
+[September 12, 2023 11:09:57 India Standard Time] [INFO | myapp] ================================================================================
+[September 12, 2023 11:09:57 India Standard Time] [INFO | myapp] Query: SELECT count(*) AS count_1 
+       FROM (SELECT task."ID" AS "task_ID", task."Title" AS "task_Title", task."Status" AS "task_Status" 
+       FROM task) AS anon_1
+Duration: 0.3ms
+
+Query: SELECT task."ID" AS "task_ID", task."Title" AS "task_Title", task."Status" AS "task_Status" 
+       FROM task
+Duration: 0.21ms
+[September 12, 2023 11:09:57 India Standard Time] [INFO | myapp] ================================================================================
+[September 12, 2023 11:09:57 India Standard Time] [INFO | myapp] >>RESP>> path: /todos | method: GET | status: 200 OK | size: 405
+[September 12, 2023 11:09:57 India Standard Time] [INFO | _internal] 127.0.0.1 - - [12/Sep/2023 11:09:57] "GET /todos HTTP/1.1" 200 -
+[September 12, 2023 11:10:16 India Standard Time] [INFO | _internal] 127.0.0.1 - - [12/Sep/2023 11:10:16] "[35m[1mPOST /todos HTTP/1.1[0m" 500 -
+[September 12, 2023 11:12:34 India Standard Time] [INFO | routes] >>REQ>> A user performed a POST operation succesfully.
+[September 12, 2023 11:12:34 India Standard Time] [INFO | routes] >>REQ>> A user performed a POST operation succesfully.
+[September 12, 2023 11:12:34 India Standard Time] [INFO | myapp] ================================================================================
+[September 12, 2023 11:12:34 India Standard Time] [INFO | myapp]  SQL Queries - 2 Queries Executed in 8.29ms
+[September 12, 2023 11:12:34 India Standard Time] [INFO | myapp] ================================================================================
+[September 12, 2023 11:12:34 India Standard Time] [INFO | myapp] Query: SELECT task."ID" AS "task_ID", task."Title" AS "task_Title", task."Status" AS "task_Status" 
+       FROM task 
+       WHERE task."ID" IS NULL
+Duration: 0.41ms
+
+Query: INSERT INTO task ("Title", "Status") VALUES (?, ?)
+Duration: 7.88ms
+[September 12, 2023 11:12:34 India Standard Time] [INFO | myapp] ================================================================================
+[September 12, 2023 11:12:34 India Standard Time] [INFO | myapp] >>RESP>> path: /todos | method: POST | status: 200 OK | size: 128
+[September 12, 2023 11:12:34 India Standard Time] [INFO | _internal] 127.0.0.1 - - [12/Sep/2023 11:12:34] "POST /todos HTTP/1.1" 200 -
+[September 12, 2023 11:12:50 India Standard Time] [INFO | routes] >>REQ>> A user retrieved all added tasks.
+[September 12, 2023 11:12:50 India Standard Time] [INFO | routes] >>REQ>> A user retrieved all added tasks.
+[September 12, 2023 11:12:50 India Standard Time] [INFO | myapp] ================================================================================
+[September 12, 2023 11:12:50 India Standard Time] [INFO | myapp]  SQL Queries - 2 Queries Executed in 0.34ms
+[September 12, 2023 11:12:50 India Standard Time] [INFO | myapp] ================================================================================
+[September 12, 2023 11:12:50 India Standard Time] [INFO | myapp] Query: SELECT count(*) AS count_1 
+       FROM (SELECT task."ID" AS "task_ID", task."Title" AS "task_Title", task."Status" AS "task_Status" 
+       FROM task) AS anon_1
+Duration: 0.2ms
+
+Query: SELECT task."ID" AS "task_ID", task."Title" AS "task_Title", task."Status" AS "task_Status" 
+       FROM task
+Duration: 0.13ms
+[September 12, 2023 11:12:50 India Standard Time] [INFO | myapp] ================================================================================
+[September 12, 2023 11:12:50 India Standard Time] [INFO | myapp] >>RESP>> path: /todos | method: GET | status: 200 OK | size: 449
+[September 12, 2023 11:12:50 India Standard Time] [INFO | _internal] 127.0.0.1 - - [12/Sep/2023 11:12:50] "GET /todos HTTP/1.1" 200 -
+[September 12, 2023 11:13:48 India Standard Time] [INFO | _internal] 127.0.0.1 - - [12/Sep/2023 11:13:48] "[35m[1mPOST /todos HTTP/1.1[0m" 500 -
+[September 12, 2023 11:14:39 India Standard Time] [INFO | _internal]  * Detected change in 'C:\\Users\\Atharva\\.vscode\\flask_apps\\todo_app\\create\\routes.py', reloading
+[September 12, 2023 11:14:39 India Standard Time] [INFO | _internal]  * Restarting with stat
+[September 12, 2023 11:14:41 India Standard Time] [WARNING | _internal]  * Debugger is active!
+[September 12, 2023 11:14:41 India Standard Time] [INFO | _internal]  * Debugger PIN: 102-174-982
+[September 12, 2023 11:14:45 India Standard Time] [INFO | _internal] 127.0.0.1 - - [12/Sep/2023 11:14:45] "[35m[1mPOST /todos HTTP/1.1[0m" 500 -
+[September 12, 2023 11:15:03 India Standard Time] [INFO | _internal]  * Detected change in 'C:\\Users\\Atharva\\.vscode\\flask_apps\\todo_app\\create\\routes.py', reloading
+[September 12, 2023 11:15:03 India Standard Time] [INFO | _internal]  * Restarting with stat
+[September 12, 2023 11:15:05 India Standard Time] [WARNING | _internal]  * Debugger is active!
+[September 12, 2023 11:15:05 India Standard Time] [INFO | _internal]  * Debugger PIN: 102-174-982
+[September 12, 2023 11:15:10 India Standard Time] [INFO | _internal] 127.0.0.1 - - [12/Sep/2023 11:15:10] "[35m[1mPOST /todos HTTP/1.1[0m" 500 -
+[October 08, 2023 23:13:49 India Standard Time] [INFO | _internal] [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+[October 08, 2023 23:13:49 India Standard Time] [INFO | _internal] [33mPress CTRL+C to quit[0m
+[October 08, 2023 23:13:49 India Standard Time] [INFO | _internal]  * Restarting with stat
+[October 08, 2023 23:13:50 India Standard Time] [WARNING | _internal]  * Debugger is active!
+[October 08, 2023 23:13:50 India Standard Time] [INFO | _internal]  * Debugger PIN: 101-349-763
+[October 08, 2023 23:14:59 India Standard Time] [INFO | myapp] >>REQ>> A user visited the home page.
+[October 08, 2023 23:14:59 India Standard Time] [INFO | myapp] ================================================================================
+[October 08, 2023 23:14:59 India Standard Time] [INFO | myapp]  SQL Queries - 0 Queries Executed in 0.0ms
+[October 08, 2023 23:14:59 India Standard Time] [INFO | myapp] ================================================================================
+[October 08, 2023 23:14:59 India Standard Time] [INFO | myapp] 
+[October 08, 2023 23:14:59 India Standard Time] [INFO | myapp] ================================================================================
+[October 08, 2023 23:14:59 India Standard Time] [INFO | myapp] >>RESP>> path: / | method: GET | status: 200 OK | size: 12
+[October 08, 2023 23:14:59 India Standard Time] [INFO | _internal] 127.0.0.1 - - [08/Oct/2023 23:14:59] "GET / HTTP/1.1" 200 -
+[October 08, 2023 23:15:08 India Standard Time] [INFO | routes] >>REQ>> A user retrieved all added tasks.
+[October 08, 2023 23:15:08 India Standard Time] [INFO | routes] >>REQ>> A user retrieved all added tasks.
+[October 08, 2023 23:15:08 India Standard Time] [INFO | myapp] ================================================================================
+[October 08, 2023 23:15:08 India Standard Time] [INFO | myapp]  SQL Queries - 2 Queries Executed in 2.15ms
+[October 08, 2023 23:15:08 India Standard Time] [INFO | myapp] ================================================================================
+[October 08, 2023 23:15:08 India Standard Time] [INFO | myapp] Query: SELECT count(*) AS count_1 
+       FROM (SELECT task."ID" AS "task_ID", task."Title" AS "task_Title", task."Status" AS "task_Status" 
+       FROM task) AS anon_1
+Duration: 2.0ms
+
+Query: SELECT task."ID" AS "task_ID", task."Title" AS "task_Title", task."Status" AS "task_Status" 
+       FROM task
+Duration: 0.15ms
+[October 08, 2023 23:15:08 India Standard Time] [INFO | myapp] ================================================================================
+[October 08, 2023 23:15:08 India Standard Time] [INFO | myapp] >>RESP>> path: /todos | method: GET | status: 200 OK | size: 449
+[October 08, 2023 23:15:08 India Standard Time] [INFO | _internal] 127.0.0.1 - - [08/Oct/2023 23:15:08] "GET /todos HTTP/1.1" 200 -

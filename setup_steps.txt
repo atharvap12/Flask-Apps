@@ -1,0 +1,8 @@
+1) "pip3 install virtualenv" - Requirement satisfied.
+2) "python -m virtualenv venv" - Created virtual environment named 'venv'.
+3) "venv\Scripts\activate" - Activated the venv.
+4) "pip3 install flask"
+5) "pip3 install flask-sqlalchemy"
+6) "pip3 install flask-marshmallow"
+7) "pip3 install marshmallow-sqlalchemy"
+8) "pip3 freeze > requirements.txt" - Generated Requirements.txt file
